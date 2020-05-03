@@ -1,0 +1,404 @@
+@import "../../index.scss";
+
+@media only screen and (max-width: 1260px) {
+  .body {
+    header {
+      padding: 0 $mini-padding;
+
+      div:last-child {
+        .mobile {
+          img {
+            position: relative;
+            top: -26px;
+            right: 0;
+          }
+        }
+      }
+    }
+
+    main {
+      .reasonsBlock {
+        padding: 0 $mini-padding;
+      }
+
+      .about {
+        height: 280px;
+
+        .aboutFlex {
+          margin: 0 $mini-padding;
+
+          .aboutDescr {
+            max-width: 50%;
+
+            h3 {
+              font-size: 24px;
+              padding: 18px 0;
+            }
+
+            p {
+              font-size: 14px;
+              padding-right: 10px
+            }
+
+            a, a:visited {
+              font-size: 14px;
+            }
+          }
+
+          .macbook {
+            img {
+
+            }
+          }
+        }
+      }
+
+      .packages {
+        padding: 0 $mini-padding;
+
+        .packItems {
+          div {
+            padding: 0 36px;
+            margin: 4px;
+
+            a, a:visited {
+              display: inline-block;
+              margin-top: 24px;
+              margin-bottom: 24px;
+              padding: 16px 16px;
+
+              border-radius: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      padding: 0 $mini-padding;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 880px) {
+  .body {
+    h1 {
+      font-size: 1.5em;
+    }
+
+    h2 {
+      font-size: 1.25em;
+    }
+
+    h3 {
+      font-size: 1.1em;
+    }
+
+    h4 {
+      font-size: 1em;
+    }
+
+    span {
+      font-size: 0.8em;
+    }
+
+    header {
+      height: 500px;
+      padding: 0 $micro-padding;
+
+      div:last-child {
+        .description {
+          a, a:visited {
+            padding: 16px 24px;
+            width: auto;
+            line-height: 1em;
+          }
+        }
+
+        .mobile {
+          img {
+            height: 450px;
+          }
+        }
+      }
+    }
+
+    main {
+      .reasonsBlock {
+        padding: 0 $micro-padding;
+
+        .reasons {
+          .reason {
+            margin: 4px;
+            min-width: 100px;
+
+            padding: 24px 20px;
+            text-align: center;
+
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+            border-radius: 32px;
+
+            h4 {
+              padding: 14px 0;
+            }
+
+            p {
+              font-size: 0.8em;
+            }
+
+            img {
+              width: 65px;
+            }
+          }
+        }
+      }
+
+      .about {
+        height: 260px;
+
+        .aboutFlex {
+          margin: 0 $micro-padding;
+
+          .aboutDescr {
+            max-width: 50%;
+
+            h3 {
+              font-size: 20px;
+              padding: 12px 0;
+            }
+
+            p {
+              font-size: 12px;
+              padding-bottom: 12px;
+            }
+
+            a, a:visited {
+              font-size: 12px;
+              padding: 16px 50px;
+            }
+          }
+
+          .macbook {
+            img {
+              right: -150px;
+            }
+          }
+        }
+      }
+
+      .packages {
+        h3 {
+          font-size: 1.1em;
+        }
+
+        p {
+          font-size: 0.8em;
+        }
+
+        padding: 0 $micro-padding;
+
+        .packItems {
+          margin: 24px 0;
+
+          div {
+            padding: 0 20px;
+            margin: 4px;
+            min-width: 100px;
+
+            a, a:visited {
+              display: inline-block;
+              margin-top: 16px;
+              margin-bottom: 16px;
+              padding: 16px 12px;
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      padding: 0 $micro-padding;
+      margin-top: 24px;
+
+      .footerForm {
+        align-items: center;
+        input {
+          font-size: 0.8em;
+          padding: 16px 12px;
+        }
+        button {
+          font-size: 0.8em;
+          padding: 14px 24px;
+          margin-left: -116px;
+        }
+      }
+      .underFooter {
+        padding: 16px 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .body {
+
+    header {
+      height: auto;
+      div:last-child {
+        margin-bottom: 24px;
+        .description {
+
+          a, a:visited {
+            margin-top: 14px;
+            padding: 16px 24px;
+            width: auto;
+            font-size: 12px;
+          }
+          p {font-size: 16px;}
+          h1 {padding: 16px 0;}
+        }
+
+        .mobile {
+          position: relative;
+          img {
+            width: 100%;
+            height: inherit;
+            top: 0;
+            right: -20px;
+          }
+        }
+      }
+    }
+
+
+    main {
+
+      .about {
+        height: 250px;
+
+        .aboutFlex {
+          margin: 0 $micro-padding;
+
+          .aboutDescr {
+            max-width: 65%;
+
+            h3 {
+              font-size: 20px;
+              padding: 0 0 8px;
+            }
+
+            p {
+              padding-bottom: 12px;
+            }
+
+            a, a:visited {
+              padding: 14px 50px;
+            }
+          }
+
+          .macbook {
+            img {
+              height: 100%;
+              right: -220px;
+            }
+          }
+        }
+      }
+    }
+
+    //done
+    footer {
+      padding: 0 $micro-padding;
+      margin-top: 0;
+
+      span {font-size: 0.625em;}
+      .footerForm {
+        input {
+          width: 100%;
+        }
+        button {
+          margin-left: -115px;
+        }
+      }
+      .underFooter {
+        padding: 16px 0;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .body {
+
+    header {
+      h2 {padding: 16px 0 10px;}
+      div:last-child {
+        margin-bottom: 50px;
+        h1 {
+          font-size: 20px;
+        }
+        .mobile {
+          display: none;
+          img {
+            height: 250px;
+          }
+        }
+      }
+    }
+
+    main {
+      .reasonsBlock {
+
+        .reasons {
+          flex-direction: column;
+          margin-top: 16px;
+          .reason {
+            margin: 8px;
+          }
+        }
+      }
+      .about {
+        height: 260px;
+        text-align: center;
+        .aboutFlex {
+          .aboutDescr {
+            max-width: 100%;
+          }
+
+          .macbook {
+            display: none;
+          }
+        }
+      }
+
+      .packages {
+
+        .packItems {
+          margin: 24px 0;
+          flex-direction: column;
+          div {
+            padding: 4px 32px;
+            margin: 8px 4px;
+            min-width: 100px;
+
+
+          }
+        }
+      }
+    }
+
+    footer {
+      margin-top: 0;
+
+      .underFooter {
+        padding: 16px 0;
+        span {
+          font-size: 0.5em;
+        }
+      }
+    }
+  }
+}

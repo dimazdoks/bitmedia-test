@@ -1,0 +1,61 @@
+@import "../../../index.scss";
+
+.calendar {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 24px;
+
+  label {
+    color: $header-color;
+
+    padding: 10px 16px 10px 0;
+    font-style: normal;
+    font-weight: bold;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  input {
+    line-height: 1em;
+    padding: 15px 10px;
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    position: relative;
+  }
+  input:hover,
+  input:active {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .calendar {
+    margin: 5px 0;
+
+    label {
+      display: inline-block;
+      width: 80px;
+      padding-right: 10px;
+
+      font-size: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .calendar {
+    margin: 5px 0;
+
+    label {
+      display: inline-block;
+      width: 55px;
+      padding-right: 10px;
+
+      font-size: 16px;
+    }
+  }
+}

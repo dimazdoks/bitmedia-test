@@ -1,0 +1,22 @@
+{
+  "name": "bitmedia-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Dmytro Zatyliuk <dmytro.ztyliuk@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "nodemon": "^2.0.3",
+    "sqlite3": "^4.2.0"
+  }
+}

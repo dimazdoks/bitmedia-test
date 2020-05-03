@@ -1,0 +1,92 @@
+@import "../../../index.scss";
+
+$left-arr-disabled: "../../../assets/img/left-arr-disabled.svg";
+$right-arr-active: "../../../assets/img/right-arr-active.svg";
+$active-pag-font: #FFFFFF;
+$pag-border: #F1F1F1;
+
+.underPaginator {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+
+  span, button {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: auto;
+  }
+
+  span {
+    border: 2px solid $pag-border;
+  }
+
+  button {
+    background-color: $active-pag-font;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  span, button {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    font-size: 16px;
+    line-height: 48px;
+
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+
+  button:last-child {
+    background-image: url($right-arr-active);
+  }
+  button:last-child:disabled {
+    background-image: url($left-arr-disabled);
+    transform: rotate(180deg);
+  }
+
+  button:first-child {
+    background-image: url($right-arr-active);
+    transform: rotate(180deg);
+  }
+  button:first-child:disabled {
+    background-image: url($left-arr-disabled);
+    transform: rotate(0);
+  }
+
+  span.currentPage {
+    background-color: $main-color;
+    color: $active-pag-font;
+  }
+}
+
+@media (max-width: 480px) {
+  .underPaginator {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+
+    span, button {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+
+
+      font-size: 14px;
+      line-height: 31px;
+
+      margin-right: 2px;
+      margin-left: 2px;
+    }
+
+
+  }
+
+}

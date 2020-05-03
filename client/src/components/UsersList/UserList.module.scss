@@ -1,0 +1,104 @@
+@import "../../index.scss";
+
+$table-head-color: #FFFFFF;
+$th-n-color: #FBFBFB;
+$th-2n-color: #F1F1F1;
+
+.master {
+  .underTable {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    margin: 1em auto;
+    border-radius: 8px;
+
+    table {
+      margin: 0 auto;
+      display: table;
+
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1em;
+      line-height: 1.25em;
+
+      text-align: center;
+      overflow: hidden;
+      width: 100%;
+
+      border-collapse: collapse;
+
+      tr:nth-child(2n) {background-color: $th-2n-color}
+      tr:nth-child(2n+1) {background-color: $th-n-color}
+
+      tr {
+        th, td {vertical-align: middle;}
+        th:not(:last-child) {border-right: 1px solid $table-head-color;}
+
+        th {
+          padding: 0.875rem 1.5rem;
+
+          font-size: 1em;
+          line-height: 1.25em;
+          background-color: $main-color;
+          color: $table-head-color;
+        }
+
+        th:first-child {border-radius: 8px 0 0 0;}
+        th:last-child {border-radius: 0 8px 0 0;}
+
+        td {
+          padding-top: 0.375em;
+          padding-bottom: 0.375em;
+
+          a, a:visited {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+
+            color: $header-color;
+            text-decoration: none;
+
+          }
+        }
+
+        th:nth-child(2), th:nth-child(3), th:nth-child(4),
+        td:nth-child(2), td:nth-child(3), td:nth-child(4) {
+          text-align: left;
+          padding-left: 1.5em;
+        }
+      }
+      tr:last-child {
+        td:first-child {border-radius: 0 0 0 8px;}
+        td:last-child {border-radius: 0 0 8px 0;}
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .master {
+    .underTable {
+      table {
+        font-size: 1em;
+        line-height: 1em;
+
+
+        tr {
+
+          th {
+            padding: 0.5rem 1rem;
+
+            font-size: 0.9em;
+            line-height: 1em;
+          }
+
+          td {
+            padding-top: 0.4em;
+            padding-bottom: 0.4em;
+          }
+
+        }
+      }
+    }
+  }
+}

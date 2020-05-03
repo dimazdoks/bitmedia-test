@@ -1,0 +1,51 @@
+@import "../../index.scss";
+
+* {
+  font-family: $font;
+}
+
+.chooseDate {
+
+  .statistics {
+    margin-bottom: 32px;
+  }
+
+  button.showCharts {
+    background-color: $main-color;
+    padding: 17px 40px;
+    color: #FFFFFF;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  button.showCharts:hover {
+    opacity: 0.9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  }
+
+  button.showCharts:disabled {
+    opacity: 0.2;
+    background-color: #d4251c;
+    cursor: not-allowed;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .chooseDate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button.showCharts {
+      width: 245px;
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+
+  button.showCharts {
+    width: 60%;
+  }
+}

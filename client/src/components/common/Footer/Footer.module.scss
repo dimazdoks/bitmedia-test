@@ -1,0 +1,76 @@
+@import "../../../index.scss";
+
+$bg-color: #1C3B55;
+$footer-font-color: #FFFFFF;
+
+.footStyle {
+  padding: 0 $padding-h;
+  text-align: center;
+
+  background-color: $bg-color;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3, span {
+      display: inline-block;
+      width: 30%;
+    }
+
+    span:last-child {
+      text-align: right;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      line-height: 1.813em;
+
+      text-align: left;
+      font-weight: normal;
+      color: $footer-font-color;
+      margin: 0;
+      padding: 14px 0;
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 142%;
+      color: $footer-font-color;
+      padding: 17px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .footStyle {
+    padding: 0 $mini-padding;
+
+    div {
+      h3 {
+        font-size: 1em;
+      }
+
+      span {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .footStyle {
+    padding: 0 $micro-padding;
+
+    div {
+      h3 {
+        font-size: 0.8em;
+      }
+
+      span {
+        font-size: 0.6em;
+      }
+    }
+  }
+}

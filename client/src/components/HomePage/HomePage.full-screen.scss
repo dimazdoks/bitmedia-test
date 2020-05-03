@@ -1,0 +1,415 @@
+@import "../../index.scss";
+$font-white: #FFFFFF;
+$font-dark: #1A1A1A;
+$font-gray: #7E7E7E;
+$color-button: #3A80BA;
+
+$h1-size: 3em;
+$h1-lh: 1.229em;
+$h2-size: 2.5em;
+$h2-lh: 1.225em;
+$h3-size: 2em;
+$h3-lh: 1.219em;
+$h4-size: 1.500em;
+$h4-lh: 1.208em;
+
+$span-size: 1.25em;
+$span-lh: 1.42em;
+$p-size: 1em;
+$p-lh: 1.42em;
+
+.body {
+  overflow: hidden;
+  box-sizing: border-box;
+
+  // <--! basic styles !-->
+
+  h1, h2, h3, h4, h5, h6,
+  span, button, p {
+    font-family: $font;
+    font-style: normal;
+    font-weight: normal;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4 {
+    padding: 24px 0;
+  }
+
+  b {
+    font-weight: bold;
+    font-size: inherit;
+  }
+
+  h1 {
+    font-size: $h1-size;
+    line-height: $h1-lh;
+  }
+
+  h2 {
+    font-size: $h2-size;
+    line-height: $h2-lh;
+  }
+
+  h3 {
+    font-size: $h3-size;
+    line-height: $h3-lh;
+  }
+
+  h4 {
+    font-size: $h4-size;
+    line-height: $h4-lh;
+  }
+
+  span {
+    font-size: $span-size;
+    line-height: $span-lh;
+  }
+
+  p {
+    font-size: $p-size;
+  }
+
+
+  // <--! header styles !-->
+
+  header>div {width: 100%;}
+  header {
+    padding: 0 $padding-h;
+    overflow: hidden;
+    height: 655px;
+    background-image: url("../../assets/img/main-page/Rectangle-header.svg");
+    background-size: cover; /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    flex-direction: column;
+
+    * {
+      max-width: 1180px;
+    }
+
+    span, h1, h2 {
+      color: $font-white;
+    }
+
+    div:last-child {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .description {
+        max-width: 586px;
+
+        a, a:visited {
+          display: inline-block;
+          margin-top: 32px;
+          color: $color-button;
+          background-color: $font-white;
+          border-radius: 8px;
+
+          text-align: center;
+          vertical-align: middle;
+
+          width: 154px;
+          line-height: 56px;
+
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+
+      .mobile {
+        z-index: 999;
+
+        img {
+          position: relative;
+          top: -26px;
+          right: -34px;
+        }
+      }
+    }
+  }
+
+  // <--! main part styles !-->
+
+  main {
+
+    // block reason
+
+    .reasonsBlock {
+      padding: 0 $padding-h;
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+      align-items: center;
+
+      h3 {
+        text-align: center;
+        max-width: 500px;
+      }
+
+      span {
+        text-align: center;
+        max-width: 740px;
+        color: $font-gray;
+      }
+
+      .reasons {
+        margin-top: 40px;
+
+        display: flex;
+        justify-content: center;
+
+        .reason {
+          margin: 10px;
+          max-width: 380px;
+          min-width: 240px;
+
+          padding: 48px 32px;
+          text-align: center;
+
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+          border-radius: 32px;
+
+          h4 {
+            font-weight: bold
+          }
+
+          p {
+            color: $font-gray
+          }
+        }
+      }
+    }
+
+    // about + macbook
+
+    .about {
+      margin-top: 80px;
+      height: 394px;
+      background: linear-gradient(93.19deg, #255D8B 2.29%, #3A80BA 96.79%);
+      display: flex;
+      justify-content: center;
+      color: $font-white;
+
+//      overflow:hidden;
+      h3 {
+        font-weight: bold
+      }
+
+      .aboutFlex {
+
+        max-width: 1180px;
+        height: 100%;
+        //position: relative;
+
+        margin: 0 $padding-h;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+
+        .aboutDescr {
+          z-index: 999;
+          max-width: 40%;
+          margin: 0;
+          padding: 0;
+
+          p {
+            padding-bottom: 24px
+          }
+
+          a, a:visited {
+            padding: 16px 64px;
+            display: inline-block;
+
+            color: $color-button;
+            background-color: $font-white;
+            border-radius: 8px;
+
+            text-decoration: none;
+          }
+        }
+
+        .macbook {
+          img {
+            position: absolute;
+            bottom: 0;
+            right: -40px;
+            height: 105%;
+          }
+        }
+      }
+    }
+
+    // packages
+    .packages {
+      margin-top: 60px;
+      background-image: url("../../assets/img/main-page/reason-back.svg");
+      background-size: auto 100%;
+
+      background-position-x: right;
+      background-repeat: no-repeat;
+
+      padding: 0 $padding-h;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h3 {
+        max-width: 560px;
+      }
+
+      span, p {
+        color: $font-gray
+      }
+
+      p {
+        max-width: 664px;
+      }
+
+      .packItems {
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        margin: 32px 0;
+
+        justify-content: center;
+
+        div {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          background-color: $font-white;
+          max-width: 380px;
+          min-width: 200px;
+          padding: 8px 60px 16px;
+          margin-left: 10px;
+          margin-right: 10px;
+
+          border: 2px solid #F1F1F1;
+          border-radius: 32px;
+
+          img {width: 100%;}
+          h1, h4 {
+            font-weight: bold;
+          }
+
+          h1 {
+            padding: 12px 0 20px;
+          }
+
+          p {
+            line-height: 1.62em;
+          }
+
+          a, a:visited {
+            display: inline-block;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            padding: 16px 52px;
+
+            background-color: $color-button;
+            color: $font-white;
+            border-radius: 8px;
+
+            text-decoration: none;
+          }
+        }
+
+        .packCenter {
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+
+          h1 {
+            color: $color-button
+          }
+        }
+      }
+
+      a.contactUs,
+      a.contactUs:visited {
+        text-decoration: none;
+        font-weight: bold;
+        color: $color-button;
+        font-size: 1em;
+      }
+    }
+  }
+
+  // footer
+  footer>div {
+    max-width: 1180px;
+    width: 100%;
+  }
+  footer {
+
+    background-image: url("../../assets/img/main-page/footer.png");
+    background-size: cover; /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+
+    background-position-y: top;
+    background-repeat: no-repeat;
+
+    padding: 0 $padding-h;
+    margin-top: 48px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .footerForm {
+
+
+      max-width: 1180px;
+      margin-top: 26px;
+      text-align: center;
+      input {
+        width: 580px;
+        padding: 20px;
+
+        background: #FFFFFF;
+        border: 1px solid #F1F1F1;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      button {
+        padding: 16px 48px;
+        background-color: $color-button;
+        border-radius: 8px;
+        color: $font-white;
+        margin-left: -180px;
+
+        cursor: pointer;
+      }
+    }
+
+    .underFooter {
+
+      max-width: 1180px;
+      color: $font-white;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      padding: 36px 0;
+      flex-grow: 1;
+      * {
+        width: 30%;
+        display: inline-block;
+        padding: 0;
+        text-align: center;
+      }
+      *:first-child {text-align: left}
+      *:last-child {text-align: right}
+    }
+  }
+}
